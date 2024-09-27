@@ -1,0 +1,252 @@
+@media (min-width: 1201px) {}
+
+@media (min-width: 1025px) and (max-width: 1200px) {}
+
+@media (max-width: 1200px) {
+    .works__item_info {
+        position: static;
+        display: block;
+        transform: translateX(0%) translateY(0%);
+    }
+
+    .works__item_name_inner,
+    .works__item_desc_inner {
+        transform: translateY(0%);
+    }
+}
+
+
+@media (max-width: 767px) {
+    .works .content_grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .w-1 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    .w-2 {
+        grid-column-start: 2;
+        grid-column-end: 4;
+    }
+
+    .w-3 {
+        grid-column-start: 3;
+        grid-column-end: 5;
+    }
+
+    .w-4 {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    .w-5 {
+        grid-column-start: 2;
+        grid-column-end: 4;
+    }
+
+    .w-6 {
+        grid-column-start: 3;
+        grid-column-end: 5;
+    }
+
+
+
+    /* .works__item_info_name {
+        font-size: 3.825vw;
+        font-weight: 400;
+        margin-top: 3vw;
+    } */
+
+    .t-12 {
+        font-size: 1.2vw;
+        font-weight: 300;
+    }
+
+    .t-14 {
+        font-size: 1.35vw;
+        font-weight: 300;
+    }
+
+    .t-16 {
+        font-size: 1.5vw;
+        font-weight: 300;
+    }
+
+    .t-18 {
+        font-size: 1.65vw;
+        font-weight: 300;
+    }
+
+    .t-20 {
+        font-size: 1.8vw;
+        font-weight: 300;
+    }
+
+    .t-30 {
+        font-size: 3vw;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .works,
+    .approach,
+    .services {
+        padding-bottom: 40vw;
+    }
+
+    .works .content_grid {
+        grid-template-columns: 1fr;
+    }
+
+    .content_grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .t-12 {
+        font-size: 2vw;
+        font-weight: 300;
+    }
+
+    .t-14 {
+        font-size: 3.5vw;
+        font-weight: 300;
+    }
+
+    .t-16 {
+        font-size: 4.3vw;
+        font-weight: 300;
+    }
+
+    .t-18 {
+        font-size: 5.5vw;
+        font-weight: 300;
+    }
+
+    .t-20 {
+        font-size: 7vw;
+        font-weight: 300;
+    }
+
+    .t-30 {
+        font-size: 7vw;
+    }
+
+    .section_title {
+        font-size: 7vw;
+    }
+
+    .hero_section__name {
+        font-size: 23vw;
+        line-height: 12.5vw;
+    }
+
+    .hero_section__name_small {
+        font-size: 6vw;
+        line-height: 11vw;
+    }
+
+    .hero_section__content {
+        transform: translateX(-50%) translateY(-51%);
+    }
+
+    .works .content_grid:not(:last-child) {
+        margin-bottom: 30vw;
+    }
+
+    .section_title {
+        margin-bottom: 20vw;
+    }
+
+    .works__item_info_name {
+        margin-top: 5vw;
+        font-size: 10vw;
+        margin-bottom: 2vw;
+    }
+
+    .works__item_info_desc svg {
+        display: none;
+    }
+
+    .works__item_img_block {
+        height: 40vh;
+    }
+
+    .approach__main_text {
+        font-size: 3rem;
+        /* text-indent: 0%; */
+        margin-bottom: 20vw;
+    }
+
+    .approach__sec_text_target {
+        text-align: left;
+        font-size: 1.3rem;
+    }
+
+    .approach__sec_text_money {
+        margin-bottom: 5vw;
+    }
+
+    .services__item:not(:last-child) {
+        margin-bottom: 20vw;
+    }
+
+    .services__item_name {
+        font-size: 13.3vw;
+        grid-column-start: 1;
+        margin-bottom: 10vw;
+    }
+
+    .services__item_props {
+        display: none;
+    }
+
+    .services__item_img {
+        grid-column-start: 1;
+        grid-column-end: 2;
+        padding-right: 0;
+    }
+
+    .services__item_desc {
+        grid-column-start: 2;
+        grid-column-end: 3;
+        margin-bottom: 10vw;
+    }
+
+    .marquee_line_wrap {
+        margin-left: -50vw;
+        width: 3000%;
+        /* display: none; */
+    }
+
+    .marquee_line_wrap p {
+        font-size: 15vw;
+    }
+
+    .footer__main_btn {
+        font-size: 15vw;
+    }
+
+    .footer__contacts_soc {
+        grid-column-start: 1;
+    }
+
+    .footer__contacts_item .content_grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer__contacts_link {
+        justify-self: end;
+    }
+
+    .footer__bottom_block {
+        padding: 8vw 0;
+    }
+
+    canvas {
+        height: 70vw;
+        width: 70vw;
+    }
+}
