@@ -26,29 +26,35 @@
                 <nav class="header__nav">
                     <ul class="header__nav_list">
                         <li class="header__nav_item">
-                            <a href="#works" class="header__nav_link t-14">работы</a>
+                            <a href="#works" onclick="lenis.scrollTo('#works')" class="header__nav_link t-14">работы</a>
                         </li>
                         <li class="header__nav_item">
-                            <a href="#services" class="header__nav_link t-14">услуги</a>
+                            <a href="#services" onclick="lenis.scrollTo('#services')"
+                                class="header__nav_link t-14">услуги</a>
                         </li>
                         <li class="header__nav_item">
-                            <a href="#footer" class="header__nav_link t-14">контакты</a>
+                            <a href="#footer" onclick="lenis.scrollTo('#footer')"
+                                class="header__nav_link t-14">контакты</a>
                         </li>
                     </ul>
                 </nav>
-                <a href="#footer" class="header__contact_btn t-16">связь</a>
+                <a href="#footer" onclick="lenis.scrollTo('#footer')" class="header__contact_btn t-14">связаться</a>
             </div>
         </div>
     </header>
     <main>
         <section class="hero_section">
             <div class="hero_section__content">
-
+                <h2 class="hero_section__content_desc t-18">digital designer web-developer</h2>
+                <!-- <div class="hero_section__marq marquee3k" data-speed="1"> -->
+                <h1 class="hero_section__content_h1">Макс Вопрос</h1>
+                <!-- </div> -->
             </div>
         </section>
         <section class="about section_forward">
             <div class="container">
                 <div class="content_grid">
+                    <p class="about__title">Обо мне</p>
                     <p class="about__me t-16">Привет, я — Макс Вопрос, работаю в сфере дизайна и веб-разработки.<br>
                         Создаю эстетичные, удобные<br>и работающие решения для бизнеса.<br><br>
                         Делал проекты для франшизы Спартак, киберспортивной организации, Олимпийских чемпионов и др.</p>
@@ -59,7 +65,8 @@
             <div class="container">
                 <div class="section_title"><span class="color_rose">/</span>работы</div>
                 <div class="content_grid">
-                    <div class="works__item test_js w-4">
+                    <a href="https://dprofile.ru/case/67348/lending-sou-sportivnoi-gimnastiki-duel-landing-page"
+                        target="_blank" class="works__item test_js w-4">
                         <p class="works__item_num t-16"><span class="color_rose">/</span>01</p>
                         <div class="works__item_img_block">
                             <img src="./img/works_duel.png" alt="">
@@ -78,10 +85,11 @@
                                 </span>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
                 <div class="content_grid">
-                    <div class="works__item w-1">
+                    <a href="https://dprofile.ru/case/69119/kibersportivnaia-organizaciia-gun5-korporativnyi-sait-buster"
+                        target="_blank" class="works__item w-1">
                         <p class="works__item_num t-16"><span class="color_rose">/</span>02</p>
                         <div class="works__item_img_block">
                             <img src="./img/works_gun5.png" alt="">
@@ -99,10 +107,11 @@
                                 </span>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
                 <div class="content_grid">
-                    <div class="works__item w-5">
+                    <a href="https://dprofile.ru/case/87148/artavazdamask-landing-page-lending-logo" target="_blank"
+                        class="works__item w-5">
                         <p class="works__item_num t-16"><span class="color_rose">/</span>03</p>
                         <div class="works__item_img_block">
                             <img src="./img/works_damask.png" alt="">
@@ -123,10 +132,10 @@
                                 </span>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
                 <div class="content_grid">
-                    <div class="works__item w-2">
+                    <a href="#" target="_top" class="works__item w-2">
                         <p class="works__item_num t-16"><span class="color_rose">/</span>04</p>
                         <div class="works__item_img_block">
                             <img src="./img/works_spartak.png" alt="">
@@ -147,10 +156,11 @@
                                 </span>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
                 <div class="content_grid">
-                    <div class="works__item w-3">
+                    <a href="https://dprofile.ru/case/33635/afisi-dlia-teatra-im-f-volkova" target="_blank"
+                        class="works__item w-3">
                         <p class="works__item_num t-16"><span class="color_rose">/</span>05</p>
                         <div class="works__item_img_block">
                             <img src="./img/works_volkov.png" alt="">
@@ -170,7 +180,7 @@
                                 </span>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
             </div>
         </section>
@@ -186,10 +196,11 @@
                     <div class="approach__spin">
                         <img src="./img/Group 106.svg" alt="">
                     </div>
-                    <p class="approach__sec_text_target ">Моя главная цель при работе над каждым проектом
-                        — выделить
-                        вас и ваш бизнес на фоне конкурентов, привлечь новых клиентов, удержать и зарядить старых
-                    </p>
+                    <div class="approach__sec_text_target">
+                        <p class="approach__sec_text_target_in">Моя главная цель при работе над каждым проектом —
+                            выделить вас и ваш бизнес на фоне
+                            конкурентов, привлечь новых клиентов, удержать и зарядить старых</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -286,6 +297,7 @@
     </footer>
 
     <script src="./js/main.js"></script>
+    <!-- <script src="./js/Marquee3000-master/marquee3k.js"></script> -->
     <script src="./js/minified/ScrollTrigger.min.js"></script>
     <script src="./js/minified/gsap.min.js"></script>
     <script src="https://unpkg.com/lenis@1.1.3/dist/lenis.min.js"></script>

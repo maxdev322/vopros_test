@@ -17,6 +17,11 @@
 
 
 @media (max-width: 767px) {
+    .approach__sec_text_target_in {
+        max-width: 44rem;
+        /* max-width: 33%; */
+    }
+
     .works .content_grid {
         grid-template-columns: repeat(4, 1fr);
     }
@@ -91,10 +96,34 @@
 
 @media (max-width: 480px) {
 
+    .header__nav {
+        display: none;
+    }
+
+    .header {
+        padding-top: 4vw;
+    }
+
+    .header__contact_btn {
+        padding: 2.7vw 5.36875vw;
+        border-radius: 3.43333333332vw;
+    }
+
+    .container {
+        padding: 0 4vw;
+    }
+
+    .about__title {
+        display: none;
+    }
+
+    .about {
+        height: 100vh;
+    }
+
     .works,
-    .approach,
-    .services {
-        padding-bottom: 40vw;
+    .approach {
+        padding-bottom: 60vw;
     }
 
     .works .content_grid {
@@ -175,8 +204,12 @@
     }
 
     .approach__main_text {
-        font-size: 3rem;
+        font-size: 2.8rem;
         /* text-indent: 0%; */
+        margin-bottom: 20vw;
+    }
+
+    .approach__spin {
         margin-bottom: 20vw;
     }
 
@@ -225,6 +258,10 @@
         font-size: 15vw;
     }
 
+    .footer {
+        padding-top: 5vw;
+    }
+
     .footer__main_btn {
         font-size: 15vw;
     }
@@ -235,6 +272,10 @@
 
     .footer__contacts_item .content_grid {
         grid-template-columns: 1fr;
+    }
+
+    .footer__contacts_item {
+        margin-bottom: 5vw;
     }
 
     .footer__contacts_link {

@@ -1,5 +1,7 @@
 window.onload = function () {
 
+    // Marquee3k.init();
+
     // function hidePreloader() {
     //     window.scrollTo(0, 0);
     // }
