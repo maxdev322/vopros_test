@@ -17,7 +17,7 @@
 </head>
 
 <body>
-    <canvas id="animationCanvas"></canvas>
+    <canvas id="animationCanvas" width=1000 height=1000></canvas>
     <header class="header">
         <div class="container">
             <div class="content_grid">
@@ -55,7 +55,10 @@
         <section class="about section_forward">
             <div class="container">
                 <div class="content_grid">
-                    <!-- <p class="about__title">Обо мне</p> -->
+                    <div class="about__title_wrap">
+                        <div class="about__title_dot"></div>
+                        <p class="about__title">Обо мне</p>
+                    </div>
                     <p class="about__me t-16">Привет, я — Макс Вопрос, работаю в сфере дизайна и веб-разработки.<br>
                         Создаю эстетичные, удобные<br>и работающие решения для бизнеса.<br><br>
                         Делал проекты для франшизы Спартак, киберспортивной организации, Олимпийских чемпионов и др.</p>
@@ -64,7 +67,7 @@
         </section>
         <section id="works" class="works section_forward">
             <div class="container">
-                <div class="section_title"><span class="color_rose">/</span>работы</div>
+                <div class="section_title">работы</div>
                 <div class="content_grid">
                     <a href="https://dprofile.ru/case/67348/lending-sou-sportivnoi-gimnastiki-duel-landing-page"
                         target="_blank" class="works__item test_js w-4">
@@ -207,24 +210,34 @@
         </section>
         <section id="services" class="services section_forward">
             <div class="container">
-                <div class="section_title"><span class="color_rose">/</span>услуги</div>
+                <div class="section_title">услуги</div>
                 <div class="services__items">
                     <div class="services__item">
                         <div class="content_grid">
                             <div class="services__item_name">Сайты</div>
-                            <div class="services__item_desc t-16">Конкуренты нервно закурят, а Ваши клиенты или простые
-                                посетители сайта точно Вас запомнят</div>
-                            <div class="services__item_img">
-                                <!-- <img src="./img/первомай 3.png" alt=""> -->
+                            <div class="services__item_desc t-14">Создание дизайна или полная разработка сайта под ключ
                             </div>
-                            <div class="services__item_props">
-                                <div class="services__item_props_item t-12">Сбор информации и тщательный анализ</div>
-                                <div class="services__item_props_item t-12">Проектирование по всем законам
-                                    пользовательского опыта</div>
-                                <div class="services__item_props_item t-12">Грамотная и креативная отрисовка
-                                    дизайн-концепта будущего сайта</div>
-                                <div class="services__item_props_item t-12">Адаптация под мобильные устройства</div>
-                                <div class="services__item_props_item t-12">Разработка и посадка сайта на CMS</div>
+                        </div>
+                    </div>
+                    <div class="services__item">
+                        <div class="content_grid">
+                            <div class="services__item_name">Айдентика</div>
+                            <div class="services__item_desc t-14">Стильная и функциональная визуальная упаковка вышего
+                                бренда
+                            </div>
+                        </div>
+                    </div>
+                    <div class="services__item">
+                        <div class="content_grid">
+                            <div class="services__item_name">Нейрографика</div>
+                            <div class="services__item_desc t-14">Креативы, рекламная графика, видео
+                            </div>
+                        </div>
+                    </div>
+                    <div class="services__item">
+                        <div class="content_grid">
+                            <div class="services__item_name">Аналитика</div>
+                            <div class="services__item_desc t-14">Полный аудит вашего продукта
                             </div>
                         </div>
                     </div>

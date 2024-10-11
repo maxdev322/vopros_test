@@ -113,8 +113,19 @@
         padding: 0 4vw;
     }
 
+    .about__title_wrap {
+        margin-bottom: 6vw;
+        gap: 4vw;
+    }
+
+    .about__title_dot {
+        height: 2vw;
+        width: 2vw;
+    }
+
     .about__title {
-        display: none;
+        font-size: 7vw;
+        /* display: none; */
     }
 
     .about {
@@ -130,6 +141,10 @@
         grid-template-columns: 1fr;
     }
 
+    .works__item_info_desc_text {
+        line-height: 130%;
+    }
+
     .content_grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -140,7 +155,7 @@
     }
 
     .t-14 {
-        font-size: 3.5vw;
+        font-size: 4vw;
         font-weight: 300;
     }
 
@@ -192,7 +207,11 @@
     .works__item_info_name {
         margin-top: 5vw;
         font-size: 10vw;
-        margin-bottom: 2vw;
+        margin-bottom: 3vw;
+    }
+
+    .works__big_height {
+        padding-bottom: 1.1vw;
     }
 
     .works__item_info_desc svg {
@@ -223,13 +242,13 @@
     }
 
     .services__item:not(:last-child) {
-        margin-bottom: 20vw;
+        margin-bottom: 10vw;
     }
 
     .services__item_name {
-        font-size: 13.3vw;
+        font-size: 10.3vw;
         grid-column-start: 1;
-        margin-bottom: 10vw;
+        margin-bottom: 3vw;
     }
 
     .services__item_props {
@@ -243,9 +262,9 @@
     }
 
     .services__item_desc {
-        grid-column-start: 2;
+        grid-column-start: 1;
         grid-column-end: 3;
-        margin-bottom: 10vw;
+        /* margin-bottom: 10vw; */
     }
 
     .marquee_line_wrap {
