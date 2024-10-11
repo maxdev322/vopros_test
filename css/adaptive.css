@@ -182,6 +182,11 @@
         font-size: 7vw;
     }
 
+    .hero_section__content_h1 {
+        font-size: 28vw;
+        letter-spacing: -1.5vw;
+    }
+
     .hero_section__name {
         font-size: 23vw;
         line-height: 12.5vw;
@@ -194,6 +199,18 @@
 
     .hero_section__content {
         transform: translateX(-50%) translateY(-51%);
+    }
+
+    .hero_section__bot_content_scroll_icon {
+        width: 4vw;
+    }
+
+    .hero_section__bot_content_scroll {
+        gap: 3vw;
+    }
+
+    .hero_section__bot {
+        bottom: 3vw;
     }
 
     .works .content_grid:not(:last-child) {
@@ -306,7 +323,7 @@
     }
 
     canvas {
-        height: 70vw;
-        width: 70vw;
+        height: 80vw;
+        width: 80vw;
     }
 }
