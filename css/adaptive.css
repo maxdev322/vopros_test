@@ -103,7 +103,12 @@
     .header {
         padding-top: 4vw;
         padding-bottom: 4vw;
-        background: rgba(16, 16, 16, 60%);
+        background: rgba(24, 24, 24, 60%);
+    }
+
+    .hero_section__content_desc_gr {
+        margin-bottom: 20vw;
+        text-align: center;
     }
 
     .header__contact_btn {
@@ -344,7 +349,7 @@
     }
 
     canvas {
-        height: 80vw;
-        width: 80vw;
+        height: 85vw;
+        width: 85vw;
     }
 }

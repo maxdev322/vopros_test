@@ -1,13 +1,13 @@
 /* Root Variables */
 :root {
-    --bg-color: #101010;
+    --bg-color: #181818;
     --text-color: #ECECEC;
     --rose-color: #EC39BC;
     --main-line-color: #484848;
     --sec-line-color: #303030;
     --sec-text-color: #767676;
     --bor-rad: 4%;
-    --hero-main_text: #161616;
+    --hero-main_text: #202020;
 }
 
 body {
@@ -344,7 +344,7 @@ body::-webkit-scrollbar-thumb {
 
 .hero_section__bot {
     width: 100%;
-    z-index: 10000;
+    z-index: 9997;
     position: absolute;
     bottom: 1vw;
     left: 0;
@@ -410,7 +410,9 @@ body::-webkit-scrollbar-thumb {
     font-size: 1.3vw;
     color: var(--text-color);
     width: 100%;
-    text-align: left;
+    text-align: right;
+    margin-bottom: 4vw;
+    line-height: 120%;
 }
 
 /* .hero_section__name {
@@ -962,8 +964,8 @@ canvas {
     transform: translateX(-50%) translateY(-50%);
     /* min-height: 500px;
     min-width: 500px; */
-    height: 25vw;
-    width: 25vw;
+    height: 27vw;
+    width: 27vw;
     pointer-events: none;
     /* filter: blur(0.35vw);
     opacity: 50%; */
