@@ -47,6 +47,49 @@ window.onload = function () {
 
     gsap.registerPlugin(ScrollTrigger)
 
+    // Переменная для хранения предыдущей позиции скролла
+    let lastScrollTop = 0;
+    const header = document.querySelector('.header');
+
+    // Добавляем слушатель на событие скролла
+    window.addEventListener('scroll', () => {
+        let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+        // Если скролл идет вниз, прячем хедер
+        if (!menuOpen & scrollTop > lastScrollTop) {
+            gsap.to(header, { duration: 0.5, y: '-110%' });
+        }
+        // Если скролл вверх, показываем хедер
+        else {
+            gsap.to(header, { duration: 0.5, y: '0%' });
+        }
+
+        // Обновляем позицию последнего скролла
+        lastScrollTop = scrollTop;
+    });
+
+    const burgerMenu = document.getElementById('burger-menu');
+    const mobileNav = document.getElementById('mobile-nav');
+    const menuInner = document.getElementById('burger_inner_text');
+    let menuOpen = false;
+
+    // Добавляем обработчик событий для иконки бургера
+    burgerMenu.addEventListener('click', () => {
+        if (!menuOpen) {
+            // Анимация открытия меню
+            gsap.to(mobileNav, { duration: 1, x: '0%', ease: 'power3.inOut' });
+            menuInner.innerHTML = "Закрыть";
+            menuInner.classList.add("menu_open");
+            menuOpen = true;
+        } else {
+            // Анимация закрытия меню
+            gsap.to(mobileNav, { duration: 1, x: '100%', ease: 'power3.inOut' });
+            menuInner.innerHTML = "Меню";
+            menuInner.classList.remove("menu_open");
+            menuOpen = false;
+        }
+    });
+
 
     gsap.to('.marquee_line_wrap', {
         x: '-2%',

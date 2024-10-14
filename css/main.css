@@ -1,22 +1,17 @@
 /* Root Variables */
 :root {
-    --bg-color: #181818;
+    --bg-color: #101010;
     --text-color: #ECECEC;
     --rose-color: #EC39BC;
     --main-line-color: #484848;
     --sec-line-color: #303030;
     --sec-text-color: #767676;
     --bor-rad: 4%;
-    --hero-main_text: #202020;
+    --hero-main_text: #161616;
 }
 
 body {
     overflow-x: hidden;
-}
-
-.marquee3k__copy {
-    padding-right: 5vw;
-    box-sizing: border-box;
 }
 
 html.lenis,
@@ -127,14 +122,24 @@ body::-webkit-scrollbar-thumb {
 .section_title {
     font-family: "Oswald", serif;
     text-transform: uppercase;
-    font-weight: 400;
-    font-size: 2vw;
+    font-weight: 600;
+    font-size: 1.5vw;
     /* text-align: center; */
     border-bottom: 1px solid var(--main-line-color);
     margin-bottom: 7.5vw;
     padding-bottom: 1vw;
-    letter-spacing: -0.1vw;
+    letter-spacing: -0.05rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
     /* margin-bottom: 100px; */
+}
+
+.section_title__circle {
+    width: 0.6vw;
+    height: 0.6vw;
+    background-color: var(--rose-color);
+    border-radius: 100%;
 }
 
 .color_gray {
@@ -145,17 +150,121 @@ body::-webkit-scrollbar-thumb {
     color: var(--rose-color);
 }
 
+
+/* Иконка бургера */
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    cursor: pointer;
+    z-index: 1000;
+    padding: 2.5vw;
+    margin-left: 3vw;
+    /* border: 1px solid var(--rose-color); */
+    border-radius: 3.43333333332vw;
+}
+
+.burger_contact_btn {
+    display: block;
+    width: 100%;
+    border-radius: 0 !important;
+    background-color: var(--bg-color) !important;
+    padding-top: 8vw !important;
+    padding-bottom: 8vw !important;
+}
+
+.burger-menu .burger_inner {
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+    color: var(--text-color);
+    font-weight: 600;
+
+    /* font-size: 4vw; */
+}
+
+.burger_inner_text.menu_open {
+    color: var(--bg-color);
+}
+
+/* Мобильное меню */
+.mobile-nav {
+    display: none;
+    gap: 10vw;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    /* align-items: center; */
+    background-color: var(--text-color);
+    transform: translateX(100%);
+    z-index: 999;
+}
+
+.mobile-nav ul {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: start;
+    gap: 3vw;
+
+    font-family: "Oswald", serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 12vw;
+    color: var(--bg-color);
+
+    padding: 0 4vw;
+}
+
+.mobile-nav ul li {
+    width: 100%;
+}
+
+.mobile-nav ul a {
+    color: var(--bg-color);
+    display: block;
+    width: 100%;
+    padding-bottom: 4vw;
+    border-bottom: 1px solid var(--sec-line-color);
+}
+
+/* Показать иконку бургера на мобильных */
+@media (max-width: 768px) {
+    .burger-menu {
+        display: flex;
+    }
+
+    .mobile-nav {
+        display: flex;
+    }
+}
+
+.header__mob_right {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+
+}
+
 /* header */
 
 .header {
     width: 100%;
-    padding-top: 1.2vw;
+    padding-top: 0.8vw;
+    padding-bottom: 0.8vw;
     position: fixed;
     z-index: 99999;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    background: linear-gradient(var(--bg-color), transparent 100%);
 }
 
 .header__logo img {
@@ -235,7 +344,7 @@ body::-webkit-scrollbar-thumb {
 
 .hero_section__bot {
     width: 100%;
-    z-index: 9998;
+    z-index: 10000;
     position: absolute;
     bottom: 1vw;
     left: 0;
@@ -249,10 +358,13 @@ body::-webkit-scrollbar-thumb {
     justify-content: space-between;
 }
 
+.hero_section__bot_content_text {}
+
 .hero_section__bot_content_scroll {
     display: flex;
     align-items: center;
     gap: 1vw;
+
 }
 
 .hero_section__bot_content_scroll_icon {
@@ -286,7 +398,19 @@ body::-webkit-scrollbar-thumb {
 }
 
 .hero_section__content_desc {
-    margin-bottom: 2vw;
+    margin-bottom: 1.5vw;
+    text-align: center;
+}
+
+.hero_section__content_desc p {
+    margin-bottom: 5px;
+}
+
+.hero_section__content_desc_gr {
+    font-size: 1.3vw;
+    color: var(--text-color);
+    width: 100%;
+    text-align: left;
 }
 
 /* .hero_section__name {
@@ -317,10 +441,19 @@ body::-webkit-scrollbar-thumb {
     display: none;   
 } */
 
+/* par */
+
+.par {
+    height: 200vh;
+    display: grid;
+    align-items: center;
+    justify-content: start;
+}
+
 /* about */
 
 .about {
-    height: 200vh;
+    height: 220vh;
     display: grid;
     align-items: center;
     justify-content: center;
@@ -601,21 +734,32 @@ body::-webkit-scrollbar-thumb {
     padding-bottom: 15vw;
 }
 
+.services .section_title {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    border: none;
+    align-self: start;
+}
+
 .services__items {
     display: flex;
     flex-direction: column;
     gap: 5vw;
+    grid-column-start: 3;
+    grid-column-end: 5;
 }
 
+.services__item {}
+
 .services__item_name {
-    /* font-family: "Oswald", serif;
+    font-family: "Oswald", serif;
     text-transform: uppercase;
-    font-weight: 500; */
+    font-weight: 600;
     font-size: 3vw;
-    grid-column-start: 1;
-    grid-column-end: 3;
-    /* margin-bottom: 4vw; */
+    margin-bottom: 1vw;
     letter-spacing: -0.1vw;
+
+    /* color: var(--sec-text-color); */
     /* font-weight: 400; */
 
 }

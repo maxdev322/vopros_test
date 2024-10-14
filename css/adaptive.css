@@ -102,11 +102,17 @@
 
     .header {
         padding-top: 4vw;
+        padding-bottom: 4vw;
+        background: rgba(16, 16, 16, 60%);
     }
 
     .header__contact_btn {
         padding: 2.7vw 5.36875vw;
         border-radius: 3.43333333332vw;
+    }
+
+    .header__mob_right>.header__contact_btn {
+        display: none;
     }
 
     .container {
@@ -115,6 +121,10 @@
 
     .about__title_wrap {
         margin-bottom: 6vw;
+        gap: 4vw;
+    }
+
+    .section_title {
         gap: 4vw;
     }
 
@@ -129,7 +139,7 @@
     }
 
     .about {
-        height: 100vh;
+        height: 150vh;
     }
 
     .works,
@@ -207,6 +217,7 @@
 
     .hero_section__bot_content_scroll {
         gap: 3vw;
+        /* align-self: flex-end; */
     }
 
     .hero_section__bot {
@@ -256,6 +267,16 @@
 
     .approach__sec_text_money {
         margin-bottom: 5vw;
+    }
+
+    .services .section_title {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        border-bottom: 1px solid var(--main-line-color);
+    }
+
+    .services__items {
+        grid-column-start: 1;
     }
 
     .services__item:not(:last-child) {

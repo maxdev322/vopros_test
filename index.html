@@ -13,7 +13,10 @@
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
     <script src="./js/main.js"></script>
-    <title>Жестко дизайню, мощно верстаю | Макс Вопрос — дизайнер, веб-разработчик</title>
+    <title>Жестко дизайню, мощно верстаю | Макс Вопрос — дизайнер, веб-разработчик | digital дизайн и разработка сайтов
+    </title>
+    <meta name="description"
+        content="Макс Вопрос - профессиональный digital дизайнер и веб-разработчик. Создаю сайты, айдентику, нейрографику и предлагаю услуги анализа и аудита дизайна ваших продуктов">
 </head>
 
 <body>
@@ -39,51 +42,77 @@
                         </li>
                     </ul>
                 </nav>
-                <a href="#footer" onclick="lenis.scrollTo('#footer')" class="header__contact_btn t-14">Обсудить
-                    проект</a>
+                <div class="header__mob_right">
+                    <a href="#footer" onclick="lenis.scrollTo('#footer')" class="header__contact_btn t-14">Связаться</a>
+                    <div class="burger-menu" id="burger-menu">
+                        <span class="burger_inner t-16" id="burger_inner">
+                            <div class="about__title_dot"></div>
+                            <p class="burger_inner_text" id="burger_inner_text">Меню</p>
+                        </span>
+                    </div>
+
+                    <nav class="mobile-nav" id="mobile-nav">
+                        <ul>
+                            <li><a href="#works">работы</a></li>
+                            <li><a href="#services">Услуги</a></li>
+                            <li><a href="#footer">контакты</a></li>
+                        </ul>
+                        <a href="#footer" onclick="lenis.scrollTo('#footer')"
+                            class="header__contact_btn burger_contact_btn t-18">
+                            Связаться
+                        </a>
+                    </nav>
+                </div>
             </div>
         </div>
     </header>
     <main>
         <section class="hero_section">
             <div class="hero_section__content">
-                <h2 class="hero_section__content_desc t-18">digital дизайнер веб-разработчик</h2>
-                <!-- <div class="hero_section__marq marquee3k" data-speed="1"> -->
+                <!-- <h2 class="hero_section__content_desc t-16">
+                    <p>digital дизайнер</p>
+                    <p>веб-разработчик</p>
+                </h2> -->
                 <h1 class="hero_section__content_h1">Макс Вопрос</h1>
-                <!-- </div> -->
             </div>
             <div class="hero_section__bot">
                 <div class="container">
                     <div class="hero_section__bot_content t-14">
-                        <!-- <p>
-                            ui/ux дизайн<br>
-                            айдентика<br>
-                            аудит
-                        </p> -->
                         <div class="hero_section__bot_content_scroll">
                             <img src="./img/scroll_icon.svg" class="hero_section__bot_content_scroll_icon" alt="">
                             <p>скролл вниз</p>
+                        </div>
+                        <div class="hero_section__bot_content_scroll">
+                            © 2024
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+        <!-- <section class="par">
+            <p class="hero_section__content_desc_gr">превращаю креативные идеи в уникальные проекты</p>
+        </section> -->
         <section class="about section_forward">
             <div class="container">
                 <div class="content_grid">
                     <div class="about__title_wrap">
                         <div class="about__title_dot"></div>
-                        <p class="about__title">Обо мне</p>
+                        <h2 class="about__title">Обо мне</h2>
                     </div>
                     <p class="about__me t-16">Привет, я — Макс Вопрос, работаю в сфере дизайна и веб-разработки.<br>
                         Создаю эстетичные, удобные<br>и работающие решения для бизнеса.<br><br>
+                        Специализируюсь на UX/UI дизайне, веб-разработке, креативных решениях и комплексных
+                        digital-проектах.<br><br>
                         Делал проекты для франшизы Спартак, киберспортивной организации, Олимпийских чемпионов и др.</p>
                 </div>
             </div>
         </section>
         <section id="works" class="works section_forward">
             <div class="container">
-                <div class="section_title">работы</div>
+                <div class="section_title">
+                    <div class="about__title_dot"></div>
+                    <p>работы</p>
+                </div>
                 <div class="content_grid">
                     <a href="https://dprofile.ru/case/67348/lending-sou-sportivnoi-gimnastiki-duel-landing-page"
                         target="_blank" class="works__item test_js w-4">
@@ -226,34 +255,32 @@
         </section>
         <section id="services" class="services section_forward">
             <div class="container">
-                <div class="section_title">услуги</div>
-                <div class="services__items">
-                    <div class="services__item">
-                        <div class="content_grid">
+                <div class="content_grid">
+                    <div class="section_title">
+                        <div class="about__title_dot"></div>
+                        <p>услуги</p>
+                    </div>
+                    <div class="services__items">
+                        <div class="services__item">
                             <div class="services__item_name">Сайты</div>
-                            <div class="services__item_desc t-14">Создание дизайна или полная разработка сайта под ключ
+                            <div class="services__item_desc t-14">Создание дизайна или полная разработка качественного
+                                адаптивного сайта под ключ
                             </div>
                         </div>
-                    </div>
-                    <div class="services__item">
-                        <div class="content_grid">
+                        <div class="services__item">
                             <div class="services__item_name">Айдентика</div>
                             <div class="services__item_desc t-14">Стильная и функциональная визуальная упаковка вышего
                                 бренда
                             </div>
                         </div>
-                    </div>
-                    <div class="services__item">
-                        <div class="content_grid">
+                        <div class="services__item">
                             <div class="services__item_name">Нейрографика</div>
                             <div class="services__item_desc t-14">Креативы, рекламная графика, видео
                             </div>
                         </div>
-                    </div>
-                    <div class="services__item">
-                        <div class="content_grid">
+                        <div class="services__item">
                             <div class="services__item_name">Аналитика</div>
-                            <div class="services__item_desc t-14">Полный аудит вашего продукта
+                            <div class="services__item_desc t-14">Полный аудит дизайна вашего продукта
                             </div>
                         </div>
                     </div>
@@ -321,7 +348,7 @@
             </div>
             <div class="footer__bottom_block">
                 <p class="t-14">Vopros design ©</p>
-                <p class="t-14">2024</p>
+                <p class="t-14">© 2024</p>
             </div>
         </div>
     </footer>
