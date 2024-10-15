@@ -158,7 +158,7 @@ window.onload = function () {
 
     for (let i = 1; i <= frameCount; i++) {
         const img = new Image();
-        img.src = `./img/logo/${String(i).padStart(4, '0')}.png`;
+        img.src = `./img/logo_wp/${String(i).padStart(4, '0')}.webp`;
         frames.push(img);
     }
 
