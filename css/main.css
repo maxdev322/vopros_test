@@ -236,17 +236,6 @@ body::-webkit-scrollbar-thumb {
     border-bottom: 1px solid var(--sec-line-color);
 }
 
-/* Показать иконку бургера на мобильных */
-@media (max-width: 768px) {
-    .burger-menu {
-        display: flex;
-    }
-
-    .mobile-nav {
-        display: flex;
-    }
-}
-
 .header__mob_right {
     display: flex;
     align-items: center;
@@ -344,7 +333,7 @@ body::-webkit-scrollbar-thumb {
 
 .hero_section__bot {
     width: 100%;
-    z-index: 9997;
+    z-index: 9999;
     position: absolute;
     bottom: 1vw;
     left: 0;

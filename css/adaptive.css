@@ -96,6 +96,14 @@
 
 @media (max-width: 480px) {
 
+    .burger-menu {
+        display: flex;
+    }
+
+    .mobile-nav {
+        display: flex;
+    }
+
     .header__nav {
         display: none;
     }

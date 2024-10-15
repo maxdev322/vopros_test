@@ -77,13 +77,13 @@ window.onload = function () {
     burgerMenu.addEventListener('click', () => {
         if (!menuOpen) {
             // Анимация открытия меню
-            gsap.to(mobileNav, { duration: 1, x: '0%', ease: 'power3.inOut' });
+            gsap.to(mobileNav, { duration: 1.2, x: '0%', ease: 'power4.inOut' });
             menuInner.innerHTML = "Закрыть";
             menuInner.classList.add("menu_open");
             menuOpen = true;
         } else {
             // Анимация закрытия меню
-            gsap.to(mobileNav, { duration: 1, x: '100%', ease: 'power3.inOut' });
+            gsap.to(mobileNav, { duration: 1.2, x: '100%', ease: 'power4.inOut' });
             menuInner.innerHTML = "Меню";
             menuInner.classList.remove("menu_open");
             menuOpen = false;
