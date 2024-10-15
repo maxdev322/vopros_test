@@ -23,63 +23,152 @@ window.onload = function () {
 
     requestAnimationFrame(raf)
 
-    const canvas = document.getElementById('animationCanvas');
-    const context = canvas.getContext('2d');
-    const frameCount = 200;
-    const frames = [];
-    let currentFrame = 0;
-    let loadedFrames = 0;  // Счётчик загруженных изображений
 
-    // Функция для обновления кадра
-    function updateFrame() {
-        currentFrame = (currentFrame + 1) % frameCount;
-        context.clearRect(0, 0, canvas.width, canvas.height);
-        context.drawImage(frames[currentFrame], 0, 0, canvas.width, canvas.height);
-    }
+    // // Получаем элемент canvas
+    // const canvas = document.getElementById('animationCanvas');
 
-    // Функция для запуска анимации
-    function startAnimation() {
-        setInterval(updateFrame, 1000 / 60);
-    }
+    // // Создаем сцену
+    // const scene = new THREE.Scene();
 
-    // Загрузка всех изображений
-    for (let i = 1; i <= frameCount; i++) {
-        const img = new Image();
-        img.src = `./img/logo/${String(i).padStart(4, '0')}.png`;
+    // const light = new THREE.DirectionalLight(0xffffff, 1);
+    // light.position.set(1, 1, 1).normalize();
+    // scene.add(light);
 
-        img.onload = () => {
-            loadedFrames++;
-            if (loadedFrames === frameCount) {
-                // Запуск анимации после загрузки всех изображений
-                startAnimation();
-            }
-        };
+    // // Общий свет
+    // const ambientLight = new THREE.AmbientLight(0xffffff, 1); // Увеличь интенсивность
+    // scene.add(ambientLight);
 
-        frames.push(img);
-    }
+    // // Направленный свет
+    // const directionalLight = new THREE.DirectionalLight(0xffffff, 2); // Увеличь яркость
+    // directionalLight.position.set(1, 1, 1).normalize();
+    // scene.add(directionalLight);
 
+    // // Точечный свет для дополнительной подсветки
+    // const pointLight = new THREE.PointLight(0xffffff, 1.5);
+    // pointLight.position.set(10, 7, 0);
+    // scene.add(pointLight);
+
+    // // Установка цвета фона сцены
+    // scene.background = null;
+
+
+
+
+    // // Настраиваем камеру
+    // const aspectRatio = canvas.clientWidth / canvas.clientHeight;
+    // const camera = new THREE.PerspectiveCamera(75, aspectRatio, 0.1, 1000);
+    // camera.position.z = 1;
+
+    // // Рендерер и настройка на canvas
+    // const renderer = new THREE.WebGLRenderer({ canvas: canvas, antialias: true, alpha: true });
+    // // renderer.setSize(window.innerWidth, window.innerHeight);
+
+    // // Загрузка 3D модели
+    // const loader = new THREE.GLTFLoader();
+    // let model;
+
+
+    // const rgbeLoader = new THREE.RGBELoader();
+    // rgbeLoader.load('./js/rostock_laage_airport_4k.hdr', (texture) => {
+    //     texture.mapping = THREE.EquirectangularReflectionMapping;
+    //     scene.environment = texture;
+    //     scene.background = texture;
+    // });
+
+
+
+    // loader.load('./js/logoAnim.glb', (gltf) => {
+    //     model = gltf.scene;
+    //     scene.add(model);
+    //     model.traverse((child) => {
+    //         if (child.isMesh) {
+    //             child.material.envMap = scene.environment;
+    //             child.material.needsUpdate = true;
+    //         }
+    //     });
+    // }, undefined, (error) => {
+    //     console.error(error);
+    // });
+
+    // // Анимация вращения
+    // function animate() {
+    //     requestAnimationFrame(animate);
+
+    //     if (model) {
+    //         model.rotation.y += 0.02;  // Вращение по оси Y
+    //     }
+
+    //     renderer.render(scene, camera);
+    // }
+
+    // animate();
+
+    // // Обновляем размер canvas при изменении окна
+    // window.addEventListener('resize', () => {
+    //     const aspectRatio = canvas.clientWidth / canvas.clientHeight;
+    //     camera.aspect = aspectRatio;
+    //     camera.updateProjectionMatrix();
+    //     renderer.setSize(canvas.clientWidth, canvas.clientHeight);
+    // });
 
 
     // const canvas = document.getElementById('animationCanvas');
-
     // const context = canvas.getContext('2d');
     // const frameCount = 200;
     // const frames = [];
     // let currentFrame = 0;
+    // let loadedFrames = 0;  // Счётчик загруженных изображений
 
-    // for (let i = 1; i <= frameCount; i++) {
-    //     const img = new Image();
-    //     img.src = `./img/logo/${String(i).padStart(4, '0')}.png`;
-    //     frames.push(img);
-    // }
-
+    // // Функция для обновления кадра
     // function updateFrame() {
     //     currentFrame = (currentFrame + 1) % frameCount;
     //     context.clearRect(0, 0, canvas.width, canvas.height);
     //     context.drawImage(frames[currentFrame], 0, 0, canvas.width, canvas.height);
     // }
 
-    // setInterval(updateFrame, 1000 / 60);
+    // // Функция для запуска анимации
+    // function startAnimation() {
+    //     setInterval(updateFrame, 1000 / 60);
+    // }
+
+    // // Загрузка всех изображений
+    // for (let i = 1; i <= frameCount; i++) {
+    //     const img = new Image();
+    //     img.src = `./img/logo/${String(i).padStart(4, '0')}.png`;
+
+    //     img.onload = () => {
+    //         loadedFrames++;
+    //         if (loadedFrames === frameCount) {
+    //             // Запуск анимации после загрузки всех изображений
+    //             startAnimation();
+    //         }
+    //     };
+
+    //     frames.push(img);
+    // }
+
+
+
+    const canvas = document.getElementById('animationCanvas');
+
+    const context = canvas.getContext('2d');
+    const frameCount = 200;
+    const frames = [];
+    let currentFrame = 0;
+
+    for (let i = 1; i <= frameCount; i++) {
+        const img = new Image();
+        img.src = `./img/logo/${String(i).padStart(4, '0')}.png`;
+        frames.push(img);
+    }
+
+    function updateFrame() {
+        currentFrame = (currentFrame + 1) % frameCount;
+        context.clearRect(0, 0, canvas.width, canvas.height);
+        context.drawImage(frames[currentFrame], 0, 0, canvas.width, canvas.height);
+    }
+
+    setInterval(updateFrame, 1000 / 60);
 
     gsap.registerPlugin(ScrollTrigger)
 
