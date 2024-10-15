@@ -29,17 +29,23 @@ window.onload = function () {
     const frames = [];
     let currentFrame = 0;
     let loadedFrames = 0;  // Счётчик загруженных изображений
+    let animationStarted = false;
 
     // Функция для обновления кадра
     function updateFrame() {
-        currentFrame = (currentFrame + 1) % frameCount;
-        context.clearRect(0, 0, canvas.width, canvas.height);
-        context.drawImage(frames[currentFrame], 0, 0, canvas.width, canvas.height);
+        if (loadedFrames > 0) {
+            currentFrame = (currentFrame + 1) % loadedFrames;  // Ограничиваем по количеству загруженных кадров
+            context.clearRect(0, 0, canvas.width, canvas.height);
+            context.drawImage(frames[currentFrame], 0, 0, canvas.width, canvas.height);
+        }
     }
 
     // Функция для запуска анимации
     function startAnimation() {
-        setInterval(updateFrame, 1000 / 60);
+        if (!animationStarted) {
+            setInterval(updateFrame, 1000 / 60);
+            animationStarted = true;
+        }
     }
 
     // Загрузка всех изображений
@@ -49,14 +55,47 @@ window.onload = function () {
 
         img.onload = () => {
             loadedFrames++;
-            if (loadedFrames === frameCount) {
-                // Запуск анимации после загрузки всех изображений
-                startAnimation();
-            }
+            startAnimation();  // Запускаем анимацию, если она ещё не запущена
         };
 
         frames.push(img);
     }
+
+
+    // const canvas = document.getElementById('animationCanvas');
+    // const context = canvas.getContext('2d');
+    // const frameCount = 200;
+    // const frames = [];
+    // let currentFrame = 0;
+    // let loadedFrames = 0;  // Счётчик загруженных изображений
+
+    // // Функция для обновления кадра
+    // function updateFrame() {
+    //     currentFrame = (currentFrame + 1) % frameCount;
+    //     context.clearRect(0, 0, canvas.width, canvas.height);
+    //     context.drawImage(frames[currentFrame], 0, 0, canvas.width, canvas.height);
+    // }
+
+    // // Функция для запуска анимации
+    // function startAnimation() {
+    //     setInterval(updateFrame, 1000 / 60);
+    // }
+
+    // // Загрузка всех изображений
+    // for (let i = 1; i <= frameCount; i++) {
+    //     const img = new Image();
+    //     img.src = `./img/logo/${String(i).padStart(4, '0')}.png`;
+
+    //     img.onload = () => {
+    //         loadedFrames++;
+    //         if (loadedFrames === frameCount) {
+    //             // Запуск анимации после загрузки всех изображений
+    //             startAnimation();
+    //         }
+    //     };
+
+    //     frames.push(img);
+    // }
 
 
 
