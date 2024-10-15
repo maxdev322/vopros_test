@@ -23,27 +23,63 @@ window.onload = function () {
 
     requestAnimationFrame(raf)
 
-
     const canvas = document.getElementById('animationCanvas');
-
     const context = canvas.getContext('2d');
     const frameCount = 200;
     const frames = [];
     let currentFrame = 0;
+    let loadedFrames = 0;  // Счётчик загруженных изображений
 
-    for (let i = 1; i <= frameCount; i++) {
-        const img = new Image();
-        img.src = `./img/logo/${String(i).padStart(4, '0')}.png`;
-        frames.push(img);
-    }
-
+    // Функция для обновления кадра
     function updateFrame() {
         currentFrame = (currentFrame + 1) % frameCount;
         context.clearRect(0, 0, canvas.width, canvas.height);
         context.drawImage(frames[currentFrame], 0, 0, canvas.width, canvas.height);
     }
 
-    setInterval(updateFrame, 1000 / 60);
+    // Функция для запуска анимации
+    function startAnimation() {
+        setInterval(updateFrame, 1000 / 60);
+    }
+
+    // Загрузка всех изображений
+    for (let i = 1; i <= frameCount; i++) {
+        const img = new Image();
+        img.src = `./img/logo/${String(i).padStart(4, '0')}.png`;
+
+        img.onload = () => {
+            loadedFrames++;
+            if (loadedFrames === frameCount) {
+                // Запуск анимации после загрузки всех изображений
+                startAnimation();
+            }
+        };
+
+        frames.push(img);
+    }
+
+
+
+    // const canvas = document.getElementById('animationCanvas');
+
+    // const context = canvas.getContext('2d');
+    // const frameCount = 200;
+    // const frames = [];
+    // let currentFrame = 0;
+
+    // for (let i = 1; i <= frameCount; i++) {
+    //     const img = new Image();
+    //     img.src = `./img/logo/${String(i).padStart(4, '0')}.png`;
+    //     frames.push(img);
+    // }
+
+    // function updateFrame() {
+    //     currentFrame = (currentFrame + 1) % frameCount;
+    //     context.clearRect(0, 0, canvas.width, canvas.height);
+    //     context.drawImage(frames[currentFrame], 0, 0, canvas.width, canvas.height);
+    // }
+
+    // setInterval(updateFrame, 1000 / 60);
 
     gsap.registerPlugin(ScrollTrigger)
 
