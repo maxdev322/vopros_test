@@ -26,6 +26,12 @@ window.onload = function () {
     const canvas = document.getElementById('animationCanvas');
 
     const context = canvas.getContext('2d');
+
+    // context.shadowColor = 'rgba(0, 0, 0, 0.15)';
+    // context.shadowBlur = 50;
+    // context.shadowOffsetX = 250;
+    // context.shadowOffsetY = 250;
+
     const frameCount = 200;
     const frames = [];
     let currentFrame = 0;

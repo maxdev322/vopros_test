@@ -581,10 +581,12 @@ body::-webkit-scrollbar-thumb {
     letter-spacing: -0.15vw;
     overflow-y: hidden;
     font-family: "Oswald";
+    margin-bottom: 0.5vw;
 }
 
 .works__item_info_desc {
     overflow: hidden;
+    line-height: 140%;
 }
 
 .works__item_desc_inner {
@@ -691,6 +693,16 @@ body::-webkit-scrollbar-thumb {
     /* height: 200vh; */
     grid-column-start: 1;
     grid-column-end: 5;
+}
+
+.approach__sticky_block_h3 {
+    padding: 1vw 2vw;
+    background-color: var(--hero-main_text);
+    width: fit-content;
+    height: fit-content;
+    border-radius: 5vw;
+
+    margin-bottom: 1vw;
 }
 
 .approach__sec_text_money {

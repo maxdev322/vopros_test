@@ -170,7 +170,7 @@
     }
 
     .works__item_info_desc_text {
-        line-height: 130%;
+        line-height: 140%;
     }
 
     .content_grid {
@@ -254,9 +254,9 @@
     }
 
     .works__item_info_name {
-        margin-top: 5vw;
+        margin-top: 7vw;
         font-size: 10vw;
-        margin-bottom: 3vw;
+        margin-bottom: 4vw;
     }
 
     .works__big_height {
@@ -288,6 +288,13 @@
 
     .approach__sec_text_money {
         margin-bottom: 5vw;
+    }
+
+    .approach__sticky_block_h3 {
+        padding: 3vw 6vw;
+        border-radius: 10vw;
+
+        margin-bottom: 3vw;
     }
 
     .services .section_title {
