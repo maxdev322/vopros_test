@@ -56,11 +56,11 @@ window.onload = function () {
 
         // Если скролл идет вниз, прячем хедер
         if (!menuOpen & scrollTop > lastScrollTop) {
-            gsap.to(header, { duration: 0.5, y: '-110%' });
+            gsap.to(header, { duration: 0.8, y: '-100%' });
         }
         // Если скролл вверх, показываем хедер
         else {
-            gsap.to(header, { duration: 0.5, y: '0%' });
+            gsap.to(header, { duration: 0.8, y: '0%' });
         }
 
         // Обновляем позицию последнего скролла
@@ -70,22 +70,34 @@ window.onload = function () {
     const burgerMenu = document.getElementById('burger-menu');
     const mobileNav = document.getElementById('mobile-nav');
     const menuInner = document.getElementById('burger_inner_text');
+    const menuLinks = document.getElementsByClassName('mobile-nav__link');
     let menuOpen = false;
+
+    console.log(menuLinks);
+
+    for (let link of menuLinks) {
+        link.addEventListener('click', () => {
+            // Анимация закрытия меню
+            gsap.to(mobileNav, { duration: 1.2, x: '100%', ease: 'power4.inOut', onComplete: () => menuOpen = false });
+            menuInner.innerHTML = "Меню";
+            menuInner.classList.remove("menu_open");
+        });
+    }
 
     // Добавляем обработчик событий для иконки бургера
     burgerMenu.addEventListener('click', () => {
         if (!menuOpen) {
             // Анимация открытия меню
-            gsap.to(mobileNav, { duration: 1.2, x: '0%', ease: 'power4.inOut' });
+            gsap.to(mobileNav, { duration: 1.2, x: '0%', ease: 'power4.inOut', onComplete: () => menuOpen = true });
             menuInner.innerHTML = "Закрыть";
             menuInner.classList.add("menu_open");
-            menuOpen = true;
+            // menuOpen = true;
         } else {
             // Анимация закрытия меню
-            gsap.to(mobileNav, { duration: 1.2, x: '100%', ease: 'power4.inOut' });
+            gsap.to(mobileNav, { duration: 1.2, x: '100%', ease: 'power4.inOut', onComplete: () => menuOpen = false });
             menuInner.innerHTML = "Меню";
             menuInner.classList.remove("menu_open");
-            menuOpen = false;
+            // menuOpen = false;
         }
     });
 

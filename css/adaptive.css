@@ -122,6 +122,11 @@
     .header__contact_btn {
         padding: 2.7vw 5.36875vw;
         border-radius: 3.43333333332vw;
+        /* margin-bottom: 20vw; */
+    }
+
+    .header__contact_btn:hover {
+        color: var(--text-color);
     }
 
     .header__mob_right>.header__contact_btn {
@@ -208,6 +213,7 @@
     .hero_section__content_h1 {
         font-size: 28vw;
         letter-spacing: -1.5vw;
+        text-align: center;
     }
 
     .hero_section__name {
@@ -223,6 +229,7 @@
     .hero_section__content {
         transform: translateX(-50%) translateY(-70%);
         font-weight: 600;
+        padding: 0 4vw;
     }
 
     .hero_section__bot_content_scroll_icon {
@@ -235,7 +242,7 @@
     }
 
     .hero_section__bot {
-        bottom: 3vw;
+        bottom: 7vw;
     }
 
     .works .content_grid:not(:last-child) {
@@ -355,6 +362,26 @@
 
     .footer__bottom_block {
         padding: 8vw 0;
+    }
+
+    .mobile-nav .footer__contacts {
+        width: 100%;
+        padding: 0 4vw;
+        margin-bottom: 20vw;
+    }
+
+    .mobile-nav .footer__contacts_soc {
+        align-self: start;
+        justify-self: start;
+    }
+
+    .mobile-nav .footer__contacts_link {
+        justify-self: start;
+        color: var(--bg-color);
+    }
+
+    .mobile-nav .footer__contacts_item {
+        margin-bottom: 8vw;
     }
 
     canvas {
