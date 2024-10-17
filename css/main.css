@@ -120,18 +120,22 @@ body::-webkit-scrollbar-thumb {
 }
 
 .section_title {
-    font-family: "Oswald", serif;
-    text-transform: uppercase;
-    font-weight: 600;
+    /* font-family: "Oswald", serif; */
+    /* text-transform: uppercase;
+    font-weight: 600; */
     font-size: 1.5vw;
     /* text-align: center; */
     border-bottom: 1px solid var(--main-line-color);
     margin-bottom: 7.5vw;
-    padding-bottom: 1vw;
+    padding-bottom: 0.5vw;
     letter-spacing: -0.05rem;
     display: flex;
     align-items: center;
     gap: 0.6rem;
+    /* background-image: linear-gradient(var(--text-color), var(--bg-color));
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text; */
     /* margin-bottom: 100px; */
 }
 
@@ -283,7 +287,7 @@ body::-webkit-scrollbar-thumb {
 
 .header__nav_list {
     display: flex;
-    gap: 0.7vw;
+    gap: 2vw;
     align-self: center;
     /* flex-direction: column; */
     /* gap: 5px; */
@@ -381,6 +385,7 @@ body::-webkit-scrollbar-thumb {
     font-family: "Oswald", serif;
     font-weight: 600;
     letter-spacing: -0.8vw;
+    line-height: 100%;
     text-transform: uppercase;
     color: var(--hero-main_text);
     font-size: 17vw;
@@ -398,7 +403,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .hero_section__content_desc_gr {
-    font-size: 1.3vw;
+    /* font-size: 1.3vw; */
     color: var(--text-color);
     width: 100%;
     text-align: right;
@@ -462,10 +467,10 @@ body::-webkit-scrollbar-thumb {
 }
 
 .about__title {
-    text-transform: uppercase;
+    /* text-transform: uppercase;
     font-family: "Oswald", serif;
-    font-weight: 600;
-    font-size: 1.3vw;
+    font-weight: 600; */
+    font-size: 1.5vw;
 }
 
 .about__title_dot {
@@ -696,8 +701,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 .approach__sticky_block_h3 {
-    padding: 1vw 2vw;
-    background-color: var(--hero-main_text);
+    padding: 0.7vw 1.4vw;
+    background-color: var(--sec-line-color);
     width: fit-content;
     height: fit-content;
     border-radius: 5vw;
@@ -746,6 +751,20 @@ body::-webkit-scrollbar-thumb {
     align-self: start;
 }
 
+.services__item_types {
+    display: flex;
+
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: start;
+    gap: 0.3vw;
+    margin-bottom: 1vw;
+}
+
+.services__item_types_item.approach__sticky_block_h3 {
+    margin-bottom: 0;
+}
+
 .services__items {
     display: flex;
     flex-direction: column;
@@ -778,8 +797,6 @@ body::-webkit-scrollbar-thumb {
     display: flex;
     align-items: center;
     line-height: 140%;
-
-
 }
 
 .services__item_img {
@@ -972,8 +989,8 @@ canvas {
     transform: translateX(-50%) translateY(-50%);
     /* min-height: 500px;
     min-width: 500px; */
-    height: 27vw;
-    width: 27vw;
+    height: 26vw;
+    width: 26vw;
     pointer-events: none;
     /* filter: blur(0.35vw);
     opacity: 50%; */
