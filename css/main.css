@@ -334,7 +334,7 @@ body::-webkit-scrollbar-thumb {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-60%);
 }
 
 .hero_section__bot {
@@ -742,7 +742,15 @@ body::-webkit-scrollbar-thumb {
 .services {
     /* padding-bottom: 200px; */
     padding-bottom: 15vw;
+    position: relative;
 }
+
+.services .section_title {
+    position: sticky;
+    top: 4vw;
+    margin-bottom: 0;
+}
+
 
 .services .section_title {
     grid-column-start: 1;

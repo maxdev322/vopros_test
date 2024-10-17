@@ -303,6 +303,10 @@
         grid-column-start: 1;
         grid-column-end: 3;
         border-bottom: 1px solid var(--main-line-color);
+
+        position: static;
+        top: 4vw;
+        margin-bottom: 20vw;
     }
 
     .services__items {
