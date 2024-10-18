@@ -67,18 +67,18 @@ window.onload = function () {
                 window.scrollTo(0, 0);
                 gsap.timeline()
                     .to(loadingImage, {
-                        opacity: 0, // Уезжает вниз за границы контейнера
-                        duration: 0.6, // Длительность анимации 1 секунда
+                        opacity: 0,
+                        duration: 0.6,
                         ease: 'power2.inOut',
                     })
                     .to('#preloader', {
                         y: '-100%', // Прелоадер уезжает вверх
-                        duration: 1,
+                        duration: 0.8,
                         ease: 'power2.inOut',
                         onComplete: () => {
                             document.getElementById('preloader').style.display = 'none'; // Убираем прелоадер из DOM после анимации
                         }
-                    }, '+=0.4'); // Задержка 0.3 секунды перед анимацией прелоадера
+                    }, '+=0.1'); // Задержка 0.3 секунды перед анимацией прелоадера
             }
         };
         frames.push(img);
