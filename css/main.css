@@ -38,6 +38,29 @@ body {
     font-weight: 600;
     font-style: normal;
     color: var(--preloader-text-color);
+
+    overflow: hidden;
+}
+
+#loadingImage {
+    width: 40vw;
+
+    animation: preload infinite 2s linear;
+
+}
+
+@keyframes preload {
+    0% {
+        fill: #cdcdcd;
+    }
+
+    50% {
+        fill: #e6e6e6;
+    }
+
+    100% {
+        fill: #cdcdcd;
+    }
 }
 
 html.lenis,

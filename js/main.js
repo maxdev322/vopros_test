@@ -52,22 +52,30 @@ window.onload = function () {
     let currentFrame = 0;
     let imagesLoaded = 0;
 
-    // Загружаем все изображения для анимации
+    const loadingImage = document.getElementById('loadingImage'); // Захватываем изображение
+
+    // Загружаем все изображения для анимации логотипа
     for (let i = 1; i <= frameCount; i++) {
         const img = new Image();
         img.src = `./img/logo_wp/${String(i).padStart(4, '0')}.webp`;
         img.onload = () => {
             imagesLoaded++;
-            // Когда все изображения загружены, запускаем анимацию уезда прелоадера
-            if (imagesLoaded === frameCount) {
-                gsap.to('#preloader', {
-                    y: '-100%', // Анимация уезда прелоадера вверх
-                    duration: 1, // Длительность анимации 1 секунда
-                    ease: 'power2.out', // Плавное ускорение/замедление
-                    onComplete: () => {
-                        document.getElementById('preloader').style.display = 'none'; // Убираем прелоадер из DOM после анимации
-                    }
-                });
+            // Когда все изображения загружены, запускаем анимацию
+            if (imagesLoaded === frameCount / 2) {
+                gsap.timeline()
+                    .to(loadingImage, {
+                        opacity: 0, // Уезжает вниз за границы контейнера
+                        duration: 0.4, // Длительность анимации 1 секунда
+                        ease: 'power4.inout'
+                    })
+                    .to('#preloader', {
+                        y: '-100%', // Прелоадер уезжает вверх
+                        duration: 1,
+                        ease: 'power2.out',
+                        onComplete: () => {
+                            document.getElementById('preloader').style.display = 'none'; // Убираем прелоадер из DOM после анимации
+                        }
+                    }, '+=0.4'); // Задержка 0.3 секунды перед анимацией прелоадера
             }
         };
         frames.push(img);
@@ -82,6 +90,10 @@ window.onload = function () {
 
     // Запускаем анимацию логотипа
     setInterval(updateFrame, 1000 / 60);
+
+    // Регистрация ScrollTrigger для GSAP (если нужно для будущих целей)
+    gsap.registerPlugin(ScrollTrigger);
+
 
     // Регистрация ScrollTrigger для GSAP (если нужно для будущих целей)
     gsap.registerPlugin(ScrollTrigger);
