@@ -1,4 +1,3 @@
-document.body.style.overflow = 'hidden';
 window.onload = function () {
 
     // Marquee3k.init();
@@ -61,10 +60,8 @@ window.onload = function () {
         img.src = `./img/logo_wp/${String(i).padStart(4, '0')}.webp`;
         img.onload = () => {
             imagesLoaded++;
-            // Когда все изображения загружены, запускаем анимацию
+
             if (imagesLoaded === frameCount / 4) {
-                document.body.style.overflow = 'auto';
-                window.scrollTo(0, 0);
                 gsap.timeline()
                     .to(loadingImage, {
                         opacity: 0,

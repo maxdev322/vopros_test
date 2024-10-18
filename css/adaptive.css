@@ -211,6 +211,11 @@
         padding-bottom: 2.5vw;
     }
 
+    #loadingImage {
+        width: 70vw;
+
+    }
+
     .hero_section__content_h1 {
         font-size: 28vw;
         letter-spacing: -1.5vw;
