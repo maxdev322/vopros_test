@@ -1,5 +1,5 @@
 window.onload = function () {
-
+    document.body.style.overflow = 'hidden';
     // Marquee3k.init();
 
     // function hidePreloader() {
@@ -62,6 +62,8 @@ window.onload = function () {
             imagesLoaded++;
             // Когда все изображения загружены, запускаем анимацию
             if (imagesLoaded === frameCount / 2) {
+                document.body.style.overflow = 'auto';
+                window.scrollTo(0, 0);
                 gsap.timeline()
                     .to(loadingImage, {
                         opacity: 0, // Уезжает вниз за границы контейнера
@@ -93,11 +95,6 @@ window.onload = function () {
 
     // Регистрация ScrollTrigger для GSAP (если нужно для будущих целей)
     gsap.registerPlugin(ScrollTrigger);
-
-
-    // Регистрация ScrollTrigger для GSAP (если нужно для будущих целей)
-    gsap.registerPlugin(ScrollTrigger);
-
 
     // Переменная для хранения предыдущей позиции скролла
     let lastScrollTop = 0;
