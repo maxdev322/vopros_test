@@ -7,6 +7,7 @@
     --sec-line-color: #303030;
     --sec-text-color: #767676;
     --bor-rad: 4%;
+    /* --hero-main_text: #1c1c1c; */
     --hero-main_text: #202020;
 }
 
@@ -388,9 +389,11 @@ body::-webkit-scrollbar-thumb {
     line-height: 100%;
     text-transform: uppercase;
     color: var(--hero-main_text);
+    /* font-size: 2350%; */
     font-size: 17vw;
     text-align: center;
     pointer-events: none;
+    z-index: 994;
 }
 
 .hero_section__content_desc {
@@ -967,9 +970,29 @@ body::-webkit-scrollbar-thumb {
     font-optical-sizing: auto;
     font-weight: 600;
     font-style: normal;
+
+    z-index: 9998;
     /* background-color: var(--text-color); */
     /* -webkit-background-clip: text;
     -webkit-text-fill-color: transparent; */
+}
+
+.hero_section__content_h2 {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-45%);
+    font-size: 7vw;
+    text-transform: uppercase;
+    color: var(--text-color);
+    font-family: "Oswald", sans-serif;
+    letter-spacing: -0.22vw;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+
+    z-index: 9998;
 }
 
 .footer__main_btn:hover {

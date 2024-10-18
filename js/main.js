@@ -23,6 +23,27 @@ window.onload = function () {
 
     requestAnimationFrame(raf)
 
+    const anchorLinks = document.querySelectorAll('a[href^="#"]');
+
+    anchorLinks.forEach(link => {
+        link.addEventListener('click', function (event) {
+            event.preventDefault();
+
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+
+            if (targetElement) {
+                // Начните новую прокрутку без полной остановки
+                lenis.scrollTo(targetElement, {
+                    offset: 0, // Настройте отступ по необходимости
+                    duration: 1.5, // Длительность прокрутки
+                    immediate: false // Плавный скролл
+                });
+            }
+        });
+    });
+
+
     const canvas = document.getElementById('animationCanvas');
 
     const context = canvas.getContext('2d');
