@@ -45,33 +45,47 @@ window.onload = function () {
 
 
     const canvas = document.getElementById('animationCanvas');
-
     const context = canvas.getContext('2d');
-
-    // context.shadowColor = 'rgba(0, 0, 0, 0.15)';
-    // context.shadowBlur = 50;
-    // context.shadowOffsetX = 250;
-    // context.shadowOffsetY = 250;
 
     const frameCount = 200;
     const frames = [];
     let currentFrame = 0;
+    let imagesLoaded = 0;
 
+    // Загружаем все изображения для анимации
     for (let i = 1; i <= frameCount; i++) {
         const img = new Image();
         img.src = `./img/logo_wp/${String(i).padStart(4, '0')}.webp`;
+        img.onload = () => {
+            imagesLoaded++;
+            // Когда все изображения загружены, запускаем анимацию уезда прелоадера
+            if (imagesLoaded === frameCount) {
+                gsap.to('#preloader', {
+                    y: '-100%', // Анимация уезда прелоадера вверх
+                    duration: 1, // Длительность анимации 1 секунда
+                    ease: 'power2.out', // Плавное ускорение/замедление
+                    onComplete: () => {
+                        document.getElementById('preloader').style.display = 'none'; // Убираем прелоадер из DOM после анимации
+                    }
+                });
+            }
+        };
         frames.push(img);
     }
 
+    // Функция обновления кадров анимации логотипа
     function updateFrame() {
         currentFrame = (currentFrame + 1) % frameCount;
         context.clearRect(0, 0, canvas.width, canvas.height);
         context.drawImage(frames[currentFrame], 0, 0, canvas.width, canvas.height);
     }
 
+    // Запускаем анимацию логотипа
     setInterval(updateFrame, 1000 / 60);
 
-    gsap.registerPlugin(ScrollTrigger)
+    // Регистрация ScrollTrigger для GSAP (если нужно для будущих целей)
+    gsap.registerPlugin(ScrollTrigger);
+
 
     // Переменная для хранения предыдущей позиции скролла
     let lastScrollTop = 0;
