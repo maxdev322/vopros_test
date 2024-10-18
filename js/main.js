@@ -61,7 +61,7 @@ window.onload = function () {
         img.onload = () => {
             imagesLoaded++;
             // Когда все изображения загружены, запускаем анимацию
-            if (imagesLoaded === frameCount / 2) {
+            if (imagesLoaded === frameCount / 4) {
                 document.body.style.overflow = 'auto';
                 window.scrollTo(0, 0);
                 gsap.timeline()
