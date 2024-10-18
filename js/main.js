@@ -68,13 +68,13 @@ window.onload = function () {
                 gsap.timeline()
                     .to(loadingImage, {
                         opacity: 0, // Уезжает вниз за границы контейнера
-                        duration: 0.4, // Длительность анимации 1 секунда
-                        ease: 'power4.inout'
+                        duration: 0.6, // Длительность анимации 1 секунда
+                        ease: 'power2.inOut',
                     })
                     .to('#preloader', {
                         y: '-100%', // Прелоадер уезжает вверх
                         duration: 1,
-                        ease: 'power2.out',
+                        ease: 'power2.inOut',
                         onComplete: () => {
                             document.getElementById('preloader').style.display = 'none'; // Убираем прелоадер из DOM после анимации
                         }
