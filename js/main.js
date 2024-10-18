@@ -1,5 +1,6 @@
+document.body.style.overflow = 'hidden';
 window.onload = function () {
-    document.body.style.overflow = 'hidden';
+
     // Marquee3k.init();
 
     // function hidePreloader() {
