@@ -278,6 +278,13 @@
         height: 40vh;
     }
 
+    .works__item_dis {
+        padding: 2vw 4vw;
+        top: 3vw;
+        left: 3vw;
+        border-radius: 5vw;
+    }
+
     .approach__main_text {
         font-size: 2.8rem;
         /* text-indent: 0%; */

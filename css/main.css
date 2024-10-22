@@ -589,6 +589,17 @@ body::-webkit-scrollbar-thumb {
     margin-bottom: 0.8vw;
 }
 
+.works__item_dis {
+    width: fit-content;
+    height: fit-content;
+    padding: 0.5vw 1vw;
+    position: absolute;
+    top: 1vw;
+    left: 1vw;
+    border-radius: 5vw;
+    background-color: #fd6060;
+}
+
 .works__item_img_block {
     /* margin-bottom: 30px; */
     width: 100%;
@@ -600,6 +611,8 @@ body::-webkit-scrollbar-thumb {
     display: grid;
     align-items: end;
     transition: all .5s ease-in-out;
+
+    position: relative;
 }
 
 /* .works__item_img_block:hover img {

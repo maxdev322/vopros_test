@@ -10,7 +10,14 @@ window.onload = function () {
     //     hidePreloader();
     // }, 0);
 
-    const lenis = new Lenis()
+    const lenis = new Lenis({
+        duration: 1.7, // продолжительность анимации прокрутки (по умолчанию 1)
+        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // можно использовать свою функцию easing
+        smoothWheel: true, // плавная прокрутка колесом мыши
+        smoothTouch: true, // плавная прокрутка при использовании touch
+        gestureOrientation: 'vertical', // направление прокрутки
+        infinite: false // если true, позволяет бесконечную прокрутку
+    })
 
     lenis.on('scroll', (e) => {
         // console.log(e)
