@@ -323,6 +323,7 @@
 
     .services__items {
         grid-column-start: 1;
+        gap: 10vw;
     }
 
     .services__item:not(:last-child) {
