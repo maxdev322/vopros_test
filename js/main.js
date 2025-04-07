@@ -23,12 +23,12 @@ window.onload = function () {
     //     // console.log(e)
     // })
 
-    function raf(time) {
-        lenis.raf(time)
-        requestAnimationFrame(raf)
-    }
+    // function raf(time) {
+    //     lenis.raf(time)
+    //     requestAnimationFrame(raf)
+    // }
 
-    requestAnimationFrame(raf)
+    // requestAnimationFrame(raf)
 
     const anchorLinks = document.querySelectorAll('a[href^="#"]');
 
