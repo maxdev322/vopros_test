@@ -10,8 +10,6 @@ window.onload = function () {
     //     hidePreloader();
     // }, 0);
 
-   
-
     const lenis = new Lenis({
         autoRaf: true,
         duration: 1.7, // продолжительность анимации прокрутки (по умолчанию 1)
@@ -22,20 +20,20 @@ window.onload = function () {
         infinite: false // если true, позволяет бесконечную прокрутку
     })
 
-     // Synchronize Lenis scrolling with GSAP's ScrollTrigger plugin
-lenis.on('scroll', ScrollTrigger.update);
+//      // Synchronize Lenis scrolling with GSAP's ScrollTrigger plugin
+// lenis.on('scroll', ScrollTrigger.update);
 
-// Add Lenis's requestAnimationFrame (raf) method to GSAP's ticker
-// This ensures Lenis's smooth scroll animation updates on each GSAP tick
-gsap.ticker.add((time) => {
-  lenis.raf(time * 1000); // Convert time from seconds to milliseconds
-});
+// // Add Lenis's requestAnimationFrame (raf) method to GSAP's ticker
+// // This ensures Lenis's smooth scroll animation updates on each GSAP tick
+// gsap.ticker.add((time) => {
+//   lenis.raf(time * 1000); // Convert time from seconds to milliseconds
+// });
 
-// Disable lag smoothing in GSAP to prevent any delay in scroll animations
-gsap.ticker.lagSmoothing(0);
+// // Disable lag smoothing in GSAP to prevent any delay in scroll animations
+// gsap.ticker.lagSmoothing(0);
 
     lenis.on('scroll', (e) => {
-        // console.log(e)
+        console.log(e)
     })
 
     function raf(time) {
