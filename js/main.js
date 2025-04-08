@@ -11,7 +11,6 @@ window.onload = function () {
     // }, 0);
 
     const lenis = new Lenis({
-        autoRaf: true,
         duration: 1.7, // продолжительность анимации прокрутки (по умолчанию 1)
         easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // можно использовать свою функцию easing
         smoothWheel: true, // плавная прокрутка колесом мыши
