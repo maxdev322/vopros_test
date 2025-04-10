@@ -10,14 +10,14 @@ window.onload = function () {
     //     hidePreloader();
     // }, 0);
 
-    const lenis = new Lenis({
-        duration: 1.7, // продолжительность анимации прокрутки (по умолчанию 1)
-        easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // можно использовать свою функцию easing
-        smoothWheel: true, // плавная прокрутка колесом мыши
-        smoothTouch: true, // плавная прокрутка при использовании touch
-        gestureOrientation: 'vertical', // направление прокрутки
-        infinite: false // если true, позволяет бесконечную прокрутку
-    })
+    // const lenis = new Lenis({
+    //     duration: 1.7, // продолжительность анимации прокрутки (по умолчанию 1)
+    //     easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // можно использовать свою функцию easing
+    //     smoothWheel: true, // плавная прокрутка колесом мыши
+    //     smoothTouch: true, // плавная прокрутка при использовании touch
+    //     gestureOrientation: 'vertical', // направление прокрутки
+    //     infinite: false // если true, позволяет бесконечную прокрутку
+    // })
 
 //      // Synchronize Lenis scrolling with GSAP's ScrollTrigger plugin
 // lenis.on('scroll', ScrollTrigger.update);
@@ -31,16 +31,16 @@ window.onload = function () {
 // // Disable lag smoothing in GSAP to prevent any delay in scroll animations
 // gsap.ticker.lagSmoothing(0);
 
-    lenis.on('scroll', (e) => {
-        console.log(e)
-    })
+    // lenis.on('scroll', (e) => {
+    //     console.log(e)
+    // })
 
-    function raf(time) {
-        lenis.raf(time)
-        requestAnimationFrame(raf)
-    }
+    // function raf(time) {
+    //     lenis.raf(time)
+    //     requestAnimationFrame(raf)
+    // }
 
-    requestAnimationFrame(raf)
+    // requestAnimationFrame(raf)
 
     const anchorLinks = document.querySelectorAll('a[href^="#"]');
 
